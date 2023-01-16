@@ -1,15 +1,31 @@
 'use strict';
 
-const score = document.querySelectorAll('.score');
+const scoreEl = document.querySelectorAll('.score');
 const btnNew = document.querySelector('.btn--new');
+const current0El = document.querySelector('#current--0');
+const current1El = document.querySelector('#current--1');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-for (let i = 0; i < score.length; i++) {
-  score[i].textContent = 0;
+const diceEl = document.querySelector('.dice');
+diceEl.classList.add('hidden');
+let currentScore = 0;
+
+for (let i = 0; i < scoreEl.length; i++) {
+  scoreEl[i].textContent = 0;
 }
 
-console.log(score);
+btnRoll.addEventListener('click', function () {
+  const dice = Math.trunc(Math.random() * 6 + 1);
+  diceEl.classList.remove('hidden');
+  diceEl.src = `dice-${dice}.png`;
 
+  if (dice !== 1) {
+    currentScore += dice;
+    current0El.textContent = currentScore;
+  } else {
+  }
+  console.log(dice);
+});
 // const score0El = document.querySelector('#score--0');
 // const score1El = document.querySelector('#score--1');
 // const diceEl = document.querySelector('.dice');
