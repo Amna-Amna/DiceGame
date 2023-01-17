@@ -390,8 +390,8 @@ main {
 }
 @media (max-width: 22em) {
   .player {
-    padding: 2.1rem;
-    margin-top: 4.5rem;
+    padding: 1rem;
+    margin-top: 4rem;
   }
   .score {
     font-size: 3.5rem;
@@ -405,7 +405,7 @@ main {
     align-self: center;
   }
   .btn--new {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .btn--roll {
     margin-top: -13rem;
