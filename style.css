@@ -438,4 +438,7 @@ main {
     height: 6rem;
     width: 6rem;
   }
+  .main {
+    overflow: hidden;
+  }
 }
