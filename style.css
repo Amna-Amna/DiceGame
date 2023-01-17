@@ -184,16 +184,14 @@ main {
     margin-top: 3rem;
   }
   .btn--roll {
-    margin-top: -13rem;
+    margin-top: 1rem;
   }
-
   .btn--hold {
-    margin-top: -15rem;
+    margin-top: 1rem;
   }
   .current {
-    width: 50%;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    width: 65%;
+    padding: 2rem;
   }
 }
 @media (max-width: 43em) {
@@ -207,6 +205,16 @@ main {
   .name {
     font-size: 2.5rem;
   }
+  .btn--new {
+    margin-top: 3rem;
+  }
+  .btn--roll {
+    margin-top: 3rem;
+  }
+
+  .btn--hold {
+    margin-top: 1rem;
+  }
   .current {
     width: 60%;
     padding: 1.5rem;
@@ -218,6 +226,11 @@ main {
   }
   .current-score {
     font-size: 1.5rem;
+  }
+  .dice {
+    top: 16.5rem;
+    height: 8rem;
+    width: 8rem;
   }
 }
 
@@ -264,6 +277,11 @@ main {
   }
   .current-score {
     font-size: 1.2rem;
+  }
+  .dice {
+    top: 16.5rem;
+    height: 7rem;
+    width: 7rem;
   }
 }
 
@@ -312,6 +330,11 @@ main {
   .current-score {
     font-size: 1.2rem;
   }
+  .dice {
+    top: 16.5rem;
+    height: 6rem;
+    width: 6rem;
+  }
 }
 
 @media (max-width: 23em) {
@@ -359,6 +382,11 @@ main {
   .current-score {
     font-size: 1.2rem;
   }
+  .dice {
+    top: 16.5rem;
+    height: 6rem;
+    width: 6rem;
+  }
 }
 @media (max-width: 22em) {
   .player {
@@ -404,5 +432,10 @@ main {
   }
   .current-score {
     font-size: 1.2rem;
+  }
+  .dice {
+    top: 16.5rem;
+    height: 6rem;
+    width: 6rem;
   }
 }
