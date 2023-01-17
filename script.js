@@ -20,6 +20,8 @@ const init = function () {
   activePlayer = 0;
   playing = true;
 
+  score0El.textContent = 0;
+  score1El.textContent = 0;
   current0El.textContent = 0;
   current1El.textContent = 0;
 
@@ -64,7 +66,7 @@ btnHold.addEventListener('click', function () {
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
-    if (scores[activePlayer] >= 100) {
+    if (scores[activePlayer] >= 20) {
       playing = false;
       diceEl.classList.add('hidden');
       document
@@ -72,7 +74,7 @@ btnHold.addEventListener('click', function () {
         .classList.add('player--winner');
       document
         .querySelector(`.player--${activePlayer}`)
-        .classList.add('player--active');
+        .classList.remove('player--active');
     } else {
       switchPlayer();
     }
