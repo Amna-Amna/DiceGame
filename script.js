@@ -12,31 +12,7 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
-const scores = [0, 0];
-let currentScore = 0;
-let activePlayer = 0;
-let playing = true;
-
-for (let i = 0; i < scoreEl.length; i++) {
-  scoreEl[i].textContent = 0;
-}
-
-btnRoll.addEventListener('click', function () {
-  if (playing) {
-    const dice = Math.trunc(Math.random() * 6 + 1);
-    diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
-
-    if (dice !== 1) {
-      currentScore += dice;
-      document.getElementById(`current--${activePlayer}`).textContent =
-        currentScore;
-    } else {
-      switchPlayer();
-    }
-    console.log(dice);
-  }
-});
+let scores, currentScore, activePlayer, playing;
 
 const init = function () {
   scores = [0, 0];
@@ -55,6 +31,32 @@ const init = function () {
 };
 
 init();
+
+const switchPlayer = function () {
+  document.getElementById(`current--${activePlayer}`).textContent = 0;
+  currentScore = 0;
+  activePlayer = activePlayer === 0 ? 1 : 0;
+
+  player0El.classList.toggle('player--active');
+  player1El.classList.toggle('player--active');
+};
+
+btnRoll.addEventListener('click', function () {
+  if (playing) {
+    const dice = Math.trunc(Math.random() * 6 + 1);
+    diceEl.classList.remove('hidden');
+    diceEl.src = `dice-${dice}.png`;
+
+    if (dice !== 1) {
+      currentScore += dice;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
+    } else {
+      switchPlayer();
+    }
+  }
+});
+
 btnHold.addEventListener('click', function () {
   if (playing) {
     scores[activePlayer] += currentScore;
@@ -76,14 +78,5 @@ btnHold.addEventListener('click', function () {
     }
   }
 });
-
-const switchPlayer = function () {
-  document.getElementById(`current--${activePlayer}`).textContent = 0;
-  currentScore = 0;
-  activePlayer = activePlayer === 0 ? 1 : 0;
-
-  player0El.classList.toggle('player--active');
-  player1El.classList.toggle('player--active');
-};
 
 btnNew.addEventListener('click', init);
