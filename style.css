@@ -172,7 +172,7 @@ main {
 
 @media (max-width: 48em) {
   .player {
-    margin-top: 3rem;
+    margin-top: 0rem;
   }
   .btn {
     padding: 0.2rem 2rem;
@@ -288,7 +288,6 @@ main {
 @media (max-width: 28em) {
   .player {
     padding: 3rem;
-    margin-top: 4.5rem;
   }
   .score {
     font-size: 4rem;
@@ -302,7 +301,7 @@ main {
     align-self: center;
   }
   .btn--new {
-    margin-top: 3rem;
+    margin-top: 8rem;
   }
   .btn--roll {
     margin-top: -13rem;
@@ -340,7 +339,6 @@ main {
 @media (max-width: 23em) {
   .player {
     padding: 2.1rem;
-    margin-top: 4rem;
   }
   .score {
     font-size: 3.5rem;
@@ -354,7 +352,7 @@ main {
     align-self: center;
   }
   .btn--new {
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
   .btn--roll {
     margin-top: -13rem;
@@ -391,7 +389,6 @@ main {
 @media (max-width: 22em) {
   .player {
     padding: 1rem;
-    margin-top: 4rem;
   }
   .score {
     font-size: 3.5rem;
@@ -404,9 +401,9 @@ main {
     justify-content: center;
     align-self: center;
   }
-  /* .btn--new {
-    margin-top: 1rem;
-  } */
+  .btn--new {
+    margin-top: 6rem;
+  }
   .btn--roll {
     margin-top: -13rem;
   }
@@ -432,6 +429,9 @@ main {
   }
   .current-score {
     font-size: 1.2rem;
+  }
+  .score {
+    margin-top: 5rem;
   }
   .dice {
     top: 16.5rem;
