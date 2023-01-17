@@ -404,9 +404,9 @@ main {
     justify-content: center;
     align-self: center;
   }
-  .btn--new {
+  /* .btn--new {
     margin-top: 1rem;
-  }
+  } */
   .btn--roll {
     margin-top: -13rem;
   }
